@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     vim \
     && rm -rf /var/lib/apt \
-    && docker-php-ext-install mysqli pdo_mysql zip
+    && docker-php-ext-install bcmath mysqli pdo_mysql zip
 
 # MongoDB #
 RUN pecl install mongodb-1.15.1 && docker-php-ext-enable mongodb
